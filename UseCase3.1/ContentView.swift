@@ -16,8 +16,11 @@ struct ContentView: View {
     var kitService = KitService()
     let smtp = SMTP(
         hostname: "smtp.mailgun.org",     // SMTP server address
-        email: "postmaster@sandboxa6ce5651fe0e42968929702ad1f1aaa4.mailgun.org",        // username to login
-        password: "bba0f7771a98d3d568a7764effcf76fc-4c2b2223-3e52354c"            // password to login
+        email: ""
+      //  postmaster@sandbox54465bd9fb4b4d5d9a18633bd805e178.mailgun.org
+        ,        // username to login
+        password:""
+           // "52d4a0eb3a8e8f0ffb18893eeeff3ba9-28e9457d-d5cce83f"            // password to login
         ,port: 587
            )
     
@@ -52,8 +55,10 @@ struct ContentView: View {
                     
                     Button("Send as Email") {
                         // Implement email sending logic using skpsmtpmessage delegate
-                        let drLight = Mail.User(name: "Dayasagar", email: "postmaster@sandboxa6ce5651fe0e42968929702ad1f1aaa4.mailgun.org")
-                        let megaman = Mail.User(name: "DJ", email: "dayasagarjakate@gmail.com")
+                        let drLight = Mail.User(name: "Dayasagar", email: // "postmaster@sandbox54465bd9fb4b4d5d9a18633bd805e178.mailgun.org"
+                        ""
+                        )
+                        let megaman = Mail.User(name: "DJ", email: "sagardaya62@gmail.com")
                         
                         let mail = Mail(
                             from: drLight,

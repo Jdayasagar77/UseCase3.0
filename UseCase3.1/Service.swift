@@ -15,10 +15,10 @@ class KitService {
     func sendMessage(_ text: String, personality: BotOption) async throws -> Chat {
         
         guard let infoDictionary: [String: Any] = Bundle.main.infoDictionary else { throw ErrorResponse(message: "Invalid Dictionary", type: .none)  }
-        guard let apikey: String = infoDictionary["ChatBot"] as? String else { throw ErrorResponse(message: "Invalid API Key", type: .none) }
+       // guard let apikey: String = infoDictionary["ChatBot"] as? String else { throw ErrorResponse(message: "Invalid API Key", type: .none) }
         
         let urlSession = URLSession(configuration: .default)
-        let configuration = Configuration(apiKey:  apikey, organization: .none)
+        let configuration = Configuration(apiKey: "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", organization: .none)
         let openAIClient = OpenAIKit.Client(session: urlSession, configuration: configuration)
         
         do {
